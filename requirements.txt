@@ -1,0 +1,2 @@
+plexapi==4.14
+mysql-connector-python==8.2.0
