@@ -3,15 +3,24 @@ services:
   sql-dock:
     container_name: SQLDock
     image: mysql
+    volumes:
+     - PlexSQLDock:/var/lib/mysql
     ports:
       - "32001:3306"
     environment:
       MYSQL_ROOT_PASSWORD: skyrim
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 3s
+      retries: 5
   py-dock:
     container_name: PyDock
-    links:
-      - "sql-dock"
     build: ./
-    image: myplex
+    image: knightblue/plex-sql-library
     ports:
       - "5001:5000"
+    depends_on:
+      sql-dock:
+        condition: service_healthy
+volumes:
+    PlexSQLDock:
