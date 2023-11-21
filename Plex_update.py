@@ -8,11 +8,7 @@ token = plex_auth.token
 plex = PlexServer(baseurl,token)
 
 #List of all libraires, as they appear in the server
-library_list = ['Anime Films','Films','TV','Streaming','Anime','Carry On','Animation','Pratchett',
-                'Batman','Disney','Docu-films','Dreamworks','Buster Keaton','Docu-series','James Bond',
-                'Kaiju','Ghibli','Looney Tunes (Golden Collection)','Marvel','Pixar','Star Wars',
-                'Top Gear Specials','Alfabusa','Anime OVAs','Clone Wars (2003)','Clone Wars (2008+)',
-                'MiniSeries','Music Videos','Video Downloads']
+library_list = ['{Insert library names here}']
 
 #Define functions to allow connections and execute queries
 def create_db_connection():
@@ -61,10 +57,7 @@ for i in library_list:
         i = i.replace('(', '')
         i = i.replace(')', '')
         i = i.replace('+', '')
-
-
-
-
+      
         drop_table = f"""DROP TABLE IF EXISTS {i};"""
         create_table = f"""CREATE TABLE {i} (id INT PRIMARY KEY, {i} VARCHAR(255), year INT);"""
         push_data = f"""INSERT INTO {i} (id,{i},year) VALUES (%s,%s,%s)"""
