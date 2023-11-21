@@ -16,7 +16,7 @@ services:
   py-dock:
     container_name: PyDock
     build: ./
-    image: knightblue/plex-sql-library
+    image: python
     ports:
       - "5001:5000"
     depends_on:
