@@ -80,24 +80,24 @@ From here, you will need to close the terminal, stopping both containers.
 
 If you want to check the results, re-open the terminal and use the following commands -
 
-'''
+```
 docker exec -it SQLDock bin/bash
-'''
+```
 
-'''
+```
 mysql -u root -p
-'''
+```
 
 Then enter the password you setup in the docker-compose file to enter the MySQL container terminal. From here, type -
 
-'''
+```
 use Plex_db;
-'''
+```
 
 to use the database you just created, then -
 
-'''
+```
 select * from {library_name}
-'''
+```
 
 You will then see every item from your library, stored in the SQL database.
