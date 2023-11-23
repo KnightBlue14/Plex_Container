@@ -101,3 +101,9 @@ select * from {library_name}
 ```
 
 You will then see every item from your library, stored in the SQL database.
+
+## Example
+
+In my library, I have a collection of films from Studio Ghibli. To use this service, I update the python and docker files with my details, as described above, create the new image, update the docker-compose file to use the new image, and then run the service. Once setup, I can then check my Ghibli library, as shown in the image below -
+
+![alt text]([https://github.com/KnightBlue14/Plex_Container/blob/main/Images/Setup%20-%20Python.png](https://github.com/KnightBlue14/Plex_Container/blob/main/Images/Setup%20-%20Database.png)https://github.com/KnightBlue14/Plex_Container/blob/main/Images/Setup%20-%20Database.png)
