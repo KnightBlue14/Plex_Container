@@ -2,22 +2,6 @@
 
 An automated Docker project that creates two containers - one for MySQL, and one for Python. The Python container extracts information from Plex libraries, and exports it into the SQL container for command line viewing.
 
-## Table of Contents
-<a name="description"></a>
-### Description - what is this?
-<a name="technologies-used"></a>
-### Technologies - what is used, and what will you need?
-<a name="how-to-use"></a>
-### How to use - how to modify the files for your use
-<a name="building-an-image"></a>
-### Building an image - creating your own Docker image
-<a name="using -the-service"></a>
-### Using the service - What to do once it's set up
-<a name="example"></a>
-### Example = what it looks like to use
-<a name="issues"></a>
-### Issues - a couple of small issues
-
 ## Description
 Plex is a software package that allows users to locally host content for streaming to other devices. I have used it for some time now, and have a large collection stored on a home-media server. 
 
