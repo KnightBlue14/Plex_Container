@@ -52,7 +52,7 @@ These can both be left alone. The .txt file adds the plexapi and mysqlconnector 
 
 Once you have set up your variables appropriately, you will need to build a new image from the files provided. This can be done by entering the command line, then navigating to the directory where these files are stored. Once there, enter the command -
 
-'''bash
+'''
 docker compose build -t {image-name}
 '''
 
@@ -60,9 +60,10 @@ This will use the Dockerfile to add the python files to your image, allowing you
 
 From here, you will want to update the docker-compose file to use your new image in the 'py-dock' service. Now if you use the command -
 
-'''bash
+'''
 docker compose up
 '''
+
 This will use both a normal mysql container, and your new image to complete the application.
 
 If everything was set up correctly, the service will run automatically. First, the MySQL container will be built, leading to this output in your console - 
@@ -79,22 +80,23 @@ From here, you will need to close the terminal, stopping both containers.
 
 If you want to check the results, re-open the terminal and use the following commands -
 
-'''bash
+'''
 docker exec -it SQLDock bin/bash
 '''
 
-'''bash
+'''
 mysql -u root -p
 '''
 
 Then enter the password you setup in the docker-compose file to enter the MySQL container terminal. From here, type -
-'''bash
+
+'''
 use Plex_db;
 '''
 
 to use the database you just created, then -
 
-'''bash
+'''
 select * from {library_name}
 '''
 
