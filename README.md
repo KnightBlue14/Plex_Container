@@ -106,7 +106,7 @@ In my library, I have a collection of films from Studio Ghibli. To use this serv
 
 ![alt text](https://github.com/KnightBlue14/Plex_Container/blob/main/Images/Setup%20-%20Database.png)
 
-##Issues
+## Issues
 
 It should be noted that there are some issues with this script that, while niche, do affect the overall success of the service -
 * The Plex API has trouble with foreign characters. For instance, I have a number of Akira Kurosawa films in my library, most of which feature the actor Toshirō Mifune. Due to the O Macron in his name, I was unable to add his name to a list, as Python was unable to translate the character properly. Thankfully, I have not had this issue with titles, so they are still present in the database. I was just unable to include more details about the films.
