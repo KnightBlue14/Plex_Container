@@ -52,17 +52,17 @@ These can both be left alone. The .txt file adds the plexapi and mysqlconnector 
 
 Once you have set up your variables appropriately, you will need to build a new image from the files provided. This can be done by entering the command line, then navigating to the directory where these files are stored. Once there, enter the command -
 
-'''
+```
 docker compose build -t {image-name}
-'''
+```
 
 This will use the Dockerfile to add the python files to your image, allowing you to use them every time you use docker-compose. For maximum utility, you will want to upload this to a public repository, allowing you to use it on multiple devices.
 
 From here, you will want to update the docker-compose file to use your new image in the 'py-dock' service. Now if you use the command -
 
-'''
+```
 docker compose up
-'''
+```
 
 This will use both a normal mysql container, and your new image to complete the application.
 
