@@ -25,6 +25,8 @@ This file is used to store authentication details. You will need to fill most of
 * token - use the instructions in the link below -
 https://www.plexopedia.com/plex-media-server/general/plex-token/
 
+(If you're having trouble finding the IP address that plex uses to connect for baseurl, it can also be found using the same method as the token. It will appaer at the start of the address you are sent to.)
+
 The token is needed for authentication purposes, and will be tied to your account. This and the url are both needed to create the Plex server object and pull data from it.
 * host - This is set by default to SQLDock. You can change it if you'd like, but you will need to update the docker-compose file accordingly
 * user - set to root by default. I would not recommend changing this, as as MySQL will only have root access available when you set this up for the first time.
