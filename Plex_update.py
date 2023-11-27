@@ -76,4 +76,4 @@ conn.close()
 if counter == len(library_list):
     print('All tables successfully updated!')
 else:
-    print(f'{29-counter} table(s) not updated')
+    print(f'{len(library_list)-counter} table(s) not updated')
