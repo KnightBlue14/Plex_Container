@@ -73,7 +73,7 @@ for i in library_list:
 cur.close()
 conn.close()
 #Small feature to alert me if any problems occur
-if counter == 29:
+if counter == len(library_list):
     print('All tables successfully updated!')
 else:
     print(f'{29-counter} table(s) not updated')
