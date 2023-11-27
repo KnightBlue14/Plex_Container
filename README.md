@@ -42,7 +42,7 @@ Also, if you opted to change the 'host' name in Plex_auth.py, you will need to c
 
 ### Plex_update.py
 
-All that needs to be changed here is the library_list variable, which the script will use to scan through each library. The name must appear as it does in your Plex server - any special characters, spaces, hyphens, etc., must be included, or it will not be able to find them. You are free to change the name of the database by changing the 'create_db' variable, just be sure to also update the 'use_db' variable.
+All that needs to be changed here is the library_list variable, which the script will use to scan through each library. The name must appear as it does in your Plex server - any special characters, spaces, hyphens, etc., must be included, or it will not be able to find them. You will also need to edit a small function at the very bottom of the script, which counts how many tables were updated. It's just a small check to see if any problems occured. You are free to change the name of the database by changing the 'create_db' variable, just be sure to also update the 'use_db' variable.
 
 ### Dockerfile and requirements.txt
 
