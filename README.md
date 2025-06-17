@@ -33,6 +33,10 @@ The token is needed for authentication purposes, and will be tied to your accoun
 * passwd - the password for your MySQL instance, defined in the docker-compose file
 * port - the port used to connect to MySQL, set by default to 3306
 
+## Quick note
+The token will expire of left too long - this can be remedied by rebuilding the container with a new token once the old one has expired, or using a number of methods to replace the old one externally, such as SSH or copying files. I'll link below a number of methods
+https://stackoverflow.com/questions/30853247/how-do-i-edit-a-file-after-i-shell-to-a-docker-container
+
 ### docker-compose.yml
 
 This can largely be left alone, apart from 2 variables -
